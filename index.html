@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A &amp; Y | Engagement</title>
+  <meta name="description" content="Ahmed Salah &amp; Yasmeen Hassan — Engagement, Thursday November 12, 2026 at 6:00 PM, Lake Dream Compound." />
+  <meta property="og:title" content="Ahmed Salah &amp; Yasmeen Hassan — Engagement" />
+  <meta property="og:description" content="Thursday, November 12, 2026 · 6:00 PM · Lake Dream Compound, 6th of October" />
+  <meta name="theme-color" content="#4a0b17" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%234a0b17' d='M16 29s-12-7.5-12-16a6.5 6.5 0 0 1 12-3.5A6.5 6.5 0 0 1 28 13c0 8.5-12 16-12 16z'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora:wght@400;500&family=Montserrat:wght@400;500;600&family=Ms+Madi&family=The+Nautigal&family=Tinos:wght@400;700&family=Viaoda+Libre&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="locked">
+
+  <!-- ============ 1. INTRO SCREEN ============ -->
+  <section id="intro" class="intro" aria-label="Invitation cover">
+    <div class="hearts" aria-hidden="true"></div>
+
+    <div class="intro-card">
+      <img class="corner corner-left" src="assets/flower.webp" alt="" aria-hidden="true" />
+      <img class="corner corner-right" src="assets/flower.webp" alt="" aria-hidden="true" />
+
+      <div class="intro-seal" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-8.5-5.3-8.5-11.2A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 8.5 2.9C20.5 15.7 12 21 12 21z" /></svg>
+      </div>
+
+      <div class="intro-mono">
+        <span>A</span>
+        <small>&amp;</small>
+        <span>Y</span>
+      </div>
+
+      <div class="divider" aria-hidden="true"><i></i><b>❦</b><i></i></div>
+      <p class="intro-date">November 12, 2026</p>
+      <button id="openBtn" class="btn-open" type="button">Open</button>
+    </div>
+  </section>
+
+  <!-- ============ 2. MAIN INVITATION ============ -->
+  <main id="main" class="page" aria-hidden="true">
+
+    <!-- Hero: save the date + envelope + monogram -->
+    <section class="hero">
+      <img class="castle castle-hero" src="assets/castle.webp" alt="" aria-hidden="true" />
+
+      <h2 class="save-date reveal">Save the Date</h2>
+
+      <!-- envelope: inside/back picture, flowers, then the front flaps with the seal -->
+      <div class="envelope reveal" aria-hidden="true">
+        <img class="env-back" src="assets/envelope-background.webp" alt="" />
+        <span class="env-flower float"><img src="assets/flower.webp" alt="" /></span>
+        <img class="env-front" src="assets/envelope-cover.webp" alt="" />
+      </div>
+
+      <div class="monogram reveal" aria-label="A and Y">
+        <span class="mono-amp" aria-hidden="true">&amp;</span>
+        <span class="mono-letter">A</span>
+        <span class="mono-letter">Y</span>
+      </div>
+    </section>
+
+    <!-- Couple names -->
+    <section class="card card-names reveal">
+      <span class="card-spray card-spray-right float" aria-hidden="true"><img src="assets/flower.webp" alt="" /></span>
+      <p class="welcome">Welcome To The Engagement of</p>
+      <h1 class="names">
+        <span>Ahmed Salah</span>
+        <span class="amp">&amp;</span>
+        <span>Yasmeen Hassan</span>
+      </h1>
+    </section>
+
+    <!-- Date, countdown, calendar, actions -->
+    <section class="card card-date reveal">
+      <span class="card-spray card-spray-left float" aria-hidden="true"><img src="assets/flower.webp" alt="" /></span>
+
+      <h3 class="party-title">The Engagement Party Will Take Place At:</h3>
+      <p class="time-line"><span>6:00 PM</span><span>THURSDAY</span></p>
+
+      <div class="big-date">
+        <span class="day">12</span>
+        <span class="month-year"><span>NOVEMBER</span><span class="year">2026</span></span>
+      </div>
+
+      <p class="countdown-label">Countdown</p>
+      <p id="countdown" class="countdown" aria-live="off">&nbsp;</p>
+
+      <div class="calendar" aria-label="November 2026 calendar">
+        <p class="cal-month">November 2026</p>
+        <div class="cal-head"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+        <div id="calGrid" class="cal-grid"></div>
+      </div>
+
+      <div class="add-cal">
+        <button id="addCalBtn" class="link-btn" type="button" aria-haspopup="true" aria-expanded="false">Add to Calendar</button>
+        <div id="calMenu" class="cal-menu" role="menu" hidden>
+          <a id="gcalLink" role="menuitem" target="_blank" rel="noopener">Google Calendar</a>
+          <button id="icsBtn" role="menuitem" type="button">Apple / Outlook (.ics)</button>
+        </div>
+      </div>
+
+      <button id="rsvpBtn" class="btn-pill" type="button">Confirm Attendance</button>
+    </section>
+
+    <!-- Venue & map -->
+    <section class="venue">
+      <img class="castle castle-venue" src="assets/castle.webp" alt="" aria-hidden="true" />
+      <div class="reveal">
+      <h3 class="venue-name" id="venueName">Lake Dream Compound, T29</h3>
+      <p class="venue-sub">X2FC+WHF First 6th of October</p>
+      <div class="map-wrap">
+        <iframe id="mapFrame" title="Venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <a id="directionsLink" class="directions" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 21 3l-8 18-2-8-8-2z" /></svg>
+        Get directions
+      </a>
+      </div>
+    </section>
+
+    <!-- Guestbook -->
+    <section class="guest-area">
+
+      <div class="guestbook reveal">
+        <img class="gb-paper" src="assets/papernote.webp" alt="" aria-hidden="true" />
+        <h3 class="gb-title">Guestbook</h3>
+        <form id="wishForm" novalidate>
+          <input id="wishName" class="field" type="text" placeholder="Enter your name*" maxlength="60" required autocomplete="name" />
+          <textarea id="wishText" class="field" placeholder="Enter your wishes*" maxlength="500" rows="4" required></textarea>
+          <div class="gb-actions">
+            <span class="tip-wrap">
+              <button id="suggestBtn" class="wand-btn" type="button" aria-label="Suggest a wish">
+                🪄
+              </button>
+              <span class="tip" role="tooltip">Suggest a wish</span>
+            </span>
+            <button class="btn-send" type="submit">Send Wishes</button>
+          </div>
+        </form>
+        <p id="noWishes" class="no-wishes">No wishes yet. Be the first!</p>
+      </div>
+
+      <div id="wishToast" class="toast" role="status" hidden>Thank you! Your wish has been saved.</div>
+      <div id="wishList" class="wish-list" aria-live="polite"></div>
+
+      <p class="closing">Your presence would be the greatest gift we could receive!</p>
+    </section>
+  </main>
+
+  <!-- ============ MODALS ============ -->
+
+  <!-- Suggested wishes -->
+  <div id="suggestModal" class="overlay overlay-dark" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="suggestTitle">
+      <button class="modal-x" type="button" data-close aria-label="Close">×</button>
+      <h4 id="suggestTitle" class="modal-title"><span class="spark">✨</span> Suggested wishes for you</h4>
+      <p class="modal-sub">Choose a wish you like or regenerate for more suggestions</p>
+      <div id="suggestList" class="suggest-list"></div>
+      <div class="modal-row">
+        <button id="moreBtn" class="m-btn m-outline" type="button"><span class="spark">✨</span> Generate more</button>
+        <button class="m-btn m-grey" type="button" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RSVP -->
+  <div id="rsvpModal" class="overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+      <button class="modal-x" type="button" data-close aria-label="Close">×</button>
+
+      <form id="rsvpForm" novalidate>
+        <h4 id="rsvpTitle" class="modal-title">Confirm your attendance</h4>
+        <p class="modal-sub">Your presence would be an honor. Please RSVP so we can prepare the warmest welcome for you.</p>
+
+        <label class="m-label" for="rsvpName">Your name</label>
+        <input id="rsvpName" class="m-input" type="text" placeholder="Enter your name" maxlength="60" autocomplete="name" />
+
+        <p class="m-label">Will you attend?</p>
+        <div class="choices" role="radiogroup" aria-label="Will you attend?">
+          <button class="choice" type="button" role="radio" aria-checked="false" data-value="yes">
+            <span class="choice-ico">✓</span> I will attend
+          </button>
+          <button class="choice" type="button" role="radio" aria-checked="false" data-value="no">
+            <span class="choice-ico">✕</span> Sorry, I can't make it
+          </button>
+        </div>
+
+        <div id="attendExtra" class="attend-extra" hidden>
+          <div class="guests-row">
+            <span class="m-label">Number of guests (including you)</span>
+            <div class="stepper">
+              <button id="minusBtn" type="button" aria-label="Fewer guests">−</button>
+              <span id="guestCount">1</span>
+              <button id="plusBtn" type="button" aria-label="More guests">+</button>
+            </div>
+          </div>
+        </div>
+
+        <label class="m-label" for="rsvpMsg">Message to the couple</label>
+        <textarea id="rsvpMsg" class="m-input" rows="2" placeholder="Leave a note (optional)" maxlength="300"></textarea>
+
+        <button id="rsvpSubmit" class="m-btn m-confirm" type="submit" disabled>Confirm</button>
+      </form>
+
+      <div id="rsvpThanks" class="thanks" hidden>
+        <div class="thanks-ico">✓</div>
+        <h4 class="modal-title">Thank you!</h4>
+        <p id="thanksText" class="modal-sub">We have received your confirmation. We look forward to seeing you on our special day!</p>
+        <button class="m-btn m-close-pill" type="button" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="musicBtn" class="music-btn" type="button" aria-label="Toggle music" hidden>♪</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
