@@ -103,8 +103,6 @@
           <button id="icsBtn" role="menuitem" type="button">Apple / Outlook (.ics)</button>
         </div>
       </div>
-
-      <button id="rsvpBtn" class="btn-pill" type="button">Confirm Attendance</button>
     </section>
 
     <!-- Venue & map -->
@@ -123,98 +121,8 @@
       </div>
     </section>
 
-    <!-- Guestbook -->
-    <section class="guest-area">
-
-      <div class="guestbook reveal">
-        <img class="gb-paper" src="assets/papernote.webp" alt="" aria-hidden="true" />
-        <h3 class="gb-title">Guestbook</h3>
-        <form id="wishForm" novalidate>
-          <input id="wishName" class="field" type="text" placeholder="Enter your name*" maxlength="60" required autocomplete="name" />
-          <textarea id="wishText" class="field" placeholder="Enter your wishes*" maxlength="500" rows="4" required></textarea>
-          <div class="gb-actions">
-            <span class="tip-wrap">
-              <button id="suggestBtn" class="wand-btn" type="button" aria-label="Suggest a wish">
-                🪄
-              </button>
-              <span class="tip" role="tooltip">Suggest a wish</span>
-            </span>
-            <button class="btn-send" type="submit">Send Wishes</button>
-          </div>
-        </form>
-        <p id="noWishes" class="no-wishes">No wishes yet. Be the first!</p>
-      </div>
-
-      <div id="wishToast" class="toast" role="status" hidden>Thank you! Your wish has been saved.</div>
-      <div id="wishList" class="wish-list" aria-live="polite"></div>
-
-      <p class="closing">Your presence would be the greatest gift we could receive!</p>
-    </section>
+    <footer class="closing">Your presence would be the greatest gift we could receive!</footer>
   </main>
-
-  <!-- ============ MODALS ============ -->
-
-  <!-- Suggested wishes -->
-  <div id="suggestModal" class="overlay overlay-dark" hidden>
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="suggestTitle">
-      <button class="modal-x" type="button" data-close aria-label="Close">×</button>
-      <h4 id="suggestTitle" class="modal-title"><span class="spark">✨</span> Suggested wishes for you</h4>
-      <p class="modal-sub">Choose a wish you like or regenerate for more suggestions</p>
-      <div id="suggestList" class="suggest-list"></div>
-      <div class="modal-row">
-        <button id="moreBtn" class="m-btn m-outline" type="button"><span class="spark">✨</span> Generate more</button>
-        <button class="m-btn m-grey" type="button" data-close>Close</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- RSVP -->
-  <div id="rsvpModal" class="overlay" hidden>
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
-      <button class="modal-x" type="button" data-close aria-label="Close">×</button>
-
-      <form id="rsvpForm" novalidate>
-        <h4 id="rsvpTitle" class="modal-title">Confirm your attendance</h4>
-        <p class="modal-sub">Your presence would be an honor. Please RSVP so we can prepare the warmest welcome for you.</p>
-
-        <label class="m-label" for="rsvpName">Your name</label>
-        <input id="rsvpName" class="m-input" type="text" placeholder="Enter your name" maxlength="60" autocomplete="name" />
-
-        <p class="m-label">Will you attend?</p>
-        <div class="choices" role="radiogroup" aria-label="Will you attend?">
-          <button class="choice" type="button" role="radio" aria-checked="false" data-value="yes">
-            <span class="choice-ico">✓</span> I will attend
-          </button>
-          <button class="choice" type="button" role="radio" aria-checked="false" data-value="no">
-            <span class="choice-ico">✕</span> Sorry, I can't make it
-          </button>
-        </div>
-
-        <div id="attendExtra" class="attend-extra" hidden>
-          <div class="guests-row">
-            <span class="m-label">Number of guests (including you)</span>
-            <div class="stepper">
-              <button id="minusBtn" type="button" aria-label="Fewer guests">−</button>
-              <span id="guestCount">1</span>
-              <button id="plusBtn" type="button" aria-label="More guests">+</button>
-            </div>
-          </div>
-        </div>
-
-        <label class="m-label" for="rsvpMsg">Message to the couple</label>
-        <textarea id="rsvpMsg" class="m-input" rows="2" placeholder="Leave a note (optional)" maxlength="300"></textarea>
-
-        <button id="rsvpSubmit" class="m-btn m-confirm" type="submit" disabled>Confirm</button>
-      </form>
-
-      <div id="rsvpThanks" class="thanks" hidden>
-        <div class="thanks-ico">✓</div>
-        <h4 class="modal-title">Thank you!</h4>
-        <p id="thanksText" class="modal-sub">We have received your confirmation. We look forward to seeing you on our special day!</p>
-        <button class="m-btn m-close-pill" type="button" data-close>Close</button>
-      </div>
-    </div>
-  </div>
 
   <button id="musicBtn" class="music-btn" type="button" aria-label="Toggle music" hidden>♪</button>
 
